@@ -1,0 +1,100 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Edit time
+    </ion-title>
+  </ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref="/"></ion-back-button>
+  </ion-buttons>
+ 
+</ion-header>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="3">Sunday</ion-col>
+      <ion-col size="2"><ion-toggle [(ngModel)]="sunday"></ion-toggle></ion-col>
+      <ng-container *ngIf="sunday">
+        <ion-col size="3"><ion-input type="time" [(ngModel)]="sundayStart"></ion-input></ion-col>
+        <ion-col size="1">To</ion-col>
+        <ion-col size="3"><ion-input type="time" [(ngModel)]="sundayEnd"></ion-input></ion-col>
+      </ng-container>
+      <ng-container *ngIf="!sunday">
+        <ion-text color="danger">Closed</ion-text>
+      </ng-container>
+    </ion-row>
+    <ion-row>
+      <ion-col size="3">Monday</ion-col>
+      <ion-col size="2"><ion-toggle [(ngModel)]="monday"></ion-toggle></ion-col>
+      <ng-container *ngIf="monday">
+        <ion-col size="3"><ion-input type="time" [(ngModel)]="mondayStart"></ion-input></ion-col>
+        <ion-col size="1">To</ion-col>
+        <ion-col size="3"><ion-input type="time" [(ngModel)]="mondayEnd"></ion-input></ion-col>
+      </ng-container>
+      <ng-container *ngIf="!monday">
+        <ion-text color="danger">Closed</ion-text>
+      </ng-container>
+    </ion-row>
+    <ion-row>
+      <ion-col size="3">Tuesday</ion-col>
+      <ion-col size="2"><ion-toggle [(ngModel)]="tuesday"></ion-toggle></ion-col>
+      <ng-container *ngIf="tuesday">
+        <ion-col size="3"><ion-input type="time" [(ngModel)]="tuesdayStart"></ion-input></ion-col>
+        <ion-col size="1">To</ion-col>
+        <ion-col size="3"><ion-input type="time" [(ngModel)]="tuesdayEnd"></ion-input></ion-col>
+      </ng-container>
+      <ng-container *ngIf="!tuesday">
+        <ion-text color="danger">Closed</ion-text>
+      </ng-container>
+    </ion-row>
+    <ion-row>
+      <ion-col size="3">Wednesday</ion-col>
+      <ion-col size="2"><ion-toggle [(ngModel)]="wednesday"></ion-toggle></ion-col>
+      <ng-container *ngIf="wednesday">
+        <ion-col size="3"><ion-input type="time" [(ngModel)]="wednesdayStart"></ion-input></ion-col>
+        <ion-col size="1">To</ion-col>
+        <ion-col size="3"><ion-input type="time" [(ngModel)]="wednesdayEnd"></ion-input></ion-col>
+      </ng-container>
+      <ng-container *ngIf="!wednesday">
+        <ion-text color="danger">Closed</ion-text>
+      </ng-container>
+    </ion-row>
+    <ion-row>
+      <ion-col size="3">Thursday</ion-col>
+      <ion-col size="2"><ion-toggle [(ngModel)]="thursday"></ion-toggle></ion-col>
+      <ng-container *ngIf="thursday">
+        <ion-col size="3"><ion-input type="time" [(ngModel)]="thursdayStart"></ion-input></ion-col>
+        <ion-col size="1">To</ion-col>
+        <ion-col size="3"><ion-input type="time" [(ngModel)]="thursdayEnd"></ion-input></ion-col>
+      </ng-container>
+      <ng-container *ngIf="!thursday">
+        <ion-text color="danger">Closed</ion-text>
+      </ng-container>
+    </ion-row>
+    <ion-row>
+      <ion-col size="3">Friday</ion-col>
+      <ion-col size="2"><ion-toggle [(ngModel)]="friday"></ion-toggle></ion-col>
+      <ng-container *ngIf="friday">
+        <ion-col size="3"><ion-input type="time" [(ngModel)]="fridayStart"></ion-input></ion-col>
+        <ion-col size="1">To</ion-col>
+        <ion-col size="3"><ion-input type="time" [(ngModel)]="fridayEnd"></ion-input></ion-col>
+      </ng-container>
+      <ng-container *ngIf="!friday">
+        <ion-text color="danger">Closed</ion-text>
+      </ng-container>
+    </ion-row>
+    <ion-row>
+      <ion-col size="3">Saturday</ion-col>
+      <ion-col size="2"><ion-toggle [(ngModel)]="saturday"></ion-toggle></ion-col>
+      <ng-container *ngIf="saturday">
+        <ion-col size="3"><ion-input type="time" [(ngModel)]="saturdayStart"></ion-input></ion-col>
+        <ion-col size="1">To</ion-col>
+        <ion-col size="3"><ion-input type="time" [(ngModel)]="saturdayEnd"></ion-input></ion-col>
+      </ng-container>
+      <ng-container *ngIf="!saturday">
+        <ion-text color="danger">Closed</ion-text>
+      </ng-container>
+    </ion-row>
+  </ion-grid>
+  <ion-button (click)="OnEdit()" expand="block">Edit</ion-button>
+</ion-content>
